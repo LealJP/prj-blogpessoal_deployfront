@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <!-- d-flex align-items-center alinhou as duas colunas de 6 desta row permitindo o alinhameto entre a palavra Entrar e a img-bg-->
+    <div class="row d-flex align-items-center">
+
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+
+                    <h1 class="text-center mb-3">Entrar</h1>
+
+                    <div class="form-group">
+                        <label for="usuario">Usuário</label>
+                        <input [(ngModel)] = 'userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input [(ngModel)] = 'userLogin.senha' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success" (click) = 'entrar()'>Entrar</button>
+                    </div>
+                    <!-- linha reta cinza que parece após botão entrar-->
+                    <hr class="mt-5 mb-5">
+
+                    <p class="text-center">
+                        Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- chamou a classe contendo a imagem de fundo-->
+        <div class="col-md-6" id="img-bg"></div> 
+   
+    </div>
+
+</div>
